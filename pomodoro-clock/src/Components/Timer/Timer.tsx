@@ -15,7 +15,7 @@ const Timer: React.FC<TimerProps> = ({ workTime, breakTime }) => {
   const [timerState, setTimerState] = useState(TimerState.WORKING);
 
   useEffect(() => {
-    let interval: NodeJS.Timeout;
+    let interval: number;
 
     if (secondsLeft === 0) {
       if (timerState === TimerState.WORKING) {
